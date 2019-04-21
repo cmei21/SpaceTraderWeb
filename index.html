@@ -6,12 +6,14 @@
 <script type = "text/javascript">
 function Grader()
 {
+	//All of these are lists, may be able to get rid of second line onwards for each chunk since we only need 1 input
 	var testList = document.getElementById('test').value;
 	var testPts = testList.split(',');
 	var testTotPts = 0;
 	for (i = 0; i < testPts.length; i++){
 		testTotPts = testTotPts + parseFloat(testPts[i]);
 	}
+	//May need to change math here to get rid of averaging
 	var testAvgPts = parseFloat((testTotPts/testPts.length)*(document.getElementById('testWeight').value/100));
 
 	var hwList = document.getElementById('hw').value;
@@ -55,6 +57,8 @@ function Grader()
 	var currTot = testAvgPts + hwAvgPts + quizAvgPts + CPAvgPts + ECAvgPts;
 	var diff = totalGrade - currTot;
 	var finalScore = Math.ceil(diff/(finalWeight/100));
+	//HERE CHANGE TO VERIFY NOT GREATER THAN 16
+	//ALSO NEED TO CHANGE MESSAGE
 	if (testWeight+hwWeight+quizWeight+CPWeight+finalWeight != 100) {
 		document.getElementById('outputDiv').innerHTML = 'Category weights do not add up to 100. Please try again.';
 	} else {

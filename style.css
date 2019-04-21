@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: black;
 }
 
 table, th, td {
@@ -13,19 +13,22 @@ tr:nth-child(1)
 
 tr:nth-child(2)
 {
-	background-color:red;
+	background-color:black;
 	font: bold 16px Georgia, serif;
 }
 
 tr:nth-child(3)
 {
-	background-color:orange;
+	background-color:black;
 	font: bold 16px Georgia, serif;
 }
 
+/*
+EXAMPLE: second 4th child going down from top, previously yellow;
+*/
 tr:nth-child(4)
 {
-	background-color:yellow;
+	background-color:black
 	font: bold 16px Georgia, serif;
 }
 
