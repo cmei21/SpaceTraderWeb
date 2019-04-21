@@ -65,9 +65,8 @@ function Grader()
 </head>
 <body>
 <p>
-	<h1> <center> Calculate Final Grades </center> </h1>
-	<h2><center>Enter the weight and your grades (in a comma-separated list) for each section.</h2>
-	<h3><center>Enter your desired grade in the class at the bottom.</h3>
+	<h1> <center> Space Traders </center> </h1>
+	<h2><center>Enter your name, difficulty and skill points (not exceeding 16)</h2>
 
 	<table>
   	<tr>
@@ -76,29 +75,24 @@ function Grader()
 	 <th>Grade</th>
 	</tr>
 	<tr>
-	 <td>Tests</td>
-	 <td><input type="text" id="testWeight" size=2 value=""></td>
+	 <td>Name</td>
 	 <td><input type="text" id="test" size=2 value=""></td>
 	</tr>
 	<tr>
-	 <td>Homework</td>
+	 <td>Pilot</td>
 	 <td><input type="text" id="hwWeight" size=2 value=""></td>
-	 <td><input type="text" id="hw" size=2 value=""></td>
 	</tr>
 	<tr>
-	 <td>Quizzes</td>
+	 <td>Fighter</td>
 	 <td><input type="text" id="quizWeight" size=2 value=""></td>
-	 <td><input type="text" id="quiz" size=2 value=""></td>
 	</tr>
 	<tr>
-	 <td>Class Participation</td>
+	 <td>Trader</td>
 	 <td><input type="text" id="CPWeight" size=2 value=""></td>
-	 <td><input type="text" id="CP" size=2 value=""></td>
 	</tr>
 	<tr>
-	 <td>Extra Credit</td>
-	 <td style = "background-color:lightblue"></td>
-	 <td><input type="text" id="EC" size=2 value=""></td>
+	 <td>Engineer</td>
+	 <td><input type="text" id="EWeight" size=2 value=""></td>
 	</tr>
 	<tr>
 	 <td>Final Exam</td>
@@ -113,7 +107,7 @@ function Grader()
 <br>
 </p>
 
-<input type= "button" value = "Calculate Grade" onclick="Grader();">
+<input type= "button" value = "Start Game" onclick="Grader();">
 <hr>
 <div id="outputDiv"></div>
 
