@@ -1,0 +1,76 @@
+body {
+    background-color: lightblue;
+}
+
+table, th, td {
+	border: 2px dotted black
+}
+
+tr:nth-child(1)
+{
+	background-color:white;
+}
+
+tr:nth-child(2)
+{
+	background-color:red;
+	font: bold 16px Georgia, serif;
+}
+
+tr:nth-child(3)
+{
+	background-color:orange;
+	font: bold 16px Georgia, serif;
+}
+
+tr:nth-child(4)
+{
+	background-color:yellow;
+	font: bold 16px Georgia, serif;
+}
+
+tr:nth-child(5)
+{
+	background-color:#2ECC71;
+	font: bold 16px Georgia, serif;
+}
+
+tr:nth-child(6) td:nth-child(2)
+{
+	border: 2px solid lightblue;
+}
+tr:nth-child(6)
+{
+	background-color:#2B65EC;
+	font: bold 16px Georgia, serif;
+}
+
+tr:nth-child(7)
+{
+	background-color:#7F38EC;
+	font: bold 16px Georgia, serif;
+}
+
+tr:nth-child(8)
+{
+	background-color:#5E5A80;
+	font: bold 16px Georgia, serif;
+}
+
+h1 {
+    color:white;
+	text-shadow: 3px 2px black;
+	font: bold 36px Georgia, serif;
+}
+
+h2 {
+	color:white;
+	text-shadow: 3px 2px black;
+	font: bold 24px Georgia, serif;
+}
+
+h3 {
+	color:white;
+	text-shadow: 3px 2px black;
+	font: bold 18px Georgia, serif;
+}
