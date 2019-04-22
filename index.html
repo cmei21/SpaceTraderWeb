@@ -18,7 +18,7 @@ function Start()
 	if (totalPoints != 16) {
 		document.getElementById('outputDiv').innerHTML = 'Total points must add up to 16!';
 	} else {
-	document.getElementById('outputDiv').innerHTML = 'Name: ' + name + '<br>' + 'Pilot: ' + pilot + '<br>' + 'Fighter: ' + fighter + '<br>' + 'Trader: ' + trader + '<br>' + 'Engineer ' + engineer + '<br>' + 'Difficulty: ' + difficultyLvl;
+	document.getElementById('outputDiv').innerHTML = 'Name: ' + name + '<br>' + 'Pilot: ' + pilot + '<br>' + 'Fighter: ' + fighter + '<br>' + 'Trader: ' + trader + '<br>' + 'Engineer ' + engineer + '<br>' + 'Difficulty: ' + difficultyLvl + '<br>' + 'Credits: 1000' + '<br>' + 'Cargo:';
 	}
 }
 
@@ -68,7 +68,6 @@ function Start()
 </p>
 
 <input type= "button" value = "Start Game" onclick="Start();">
-<hr>
 <div style="color:white;font: bold 16px Georgia, serif;" id="outputDiv"></div>
 
 </body>
