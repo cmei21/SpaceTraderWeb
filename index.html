@@ -11,33 +11,15 @@ function Start()
 	var fighter = document.getElementById('Fighter').value;
 	var trader = document.getElementById('Trader').value;
 	var engineer = document.getElementById('Engineer').value;
-	var difficulty = document.getElementById("myDropdown").classList.toggle("show");
+	var difficulty = document.getElementById("dropdown");
+    var difficultyLvl = difficulty.options[difficulty.selectedIndex].value;
 	var totalPoints = parseInt(pilot) + parseInt(fighter) + parseInt(trader) + parseInt(engineer);
 
 	if (totalPoints != 16) {
 		document.getElementById('outputDiv').innerHTML = 'Total points must add up to 16!';
 	} else {
-	document.getElementById('outputDiv').innerHTML = 'Name: ' + name + '<br>' + 'Pilot: ' + pilot + '<br>' + 'Fighter: ' + fighter + '<br>' + 'Trader: ' + trader + '<br>' + 'Engineer ' + engineer + '<br>' + 'Difficulty:' + difficulty;
+	document.getElementById('outputDiv').innerHTML = 'Name: ' + name + '<br>' + 'Pilot: ' + pilot + '<br>' + 'Fighter: ' + fighter + '<br>' + 'Trader: ' + trader + '<br>' + 'Engineer ' + engineer + '<br>' + 'Difficulty: ' + difficultyLvl;
 	}
-}
-
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
 }
 
 </script>
@@ -47,37 +29,41 @@ window.onclick = function(event) {
 	<h1> <center> Space Traders </center> </h1>
 	<h2><center>Enter your name, difficulty, and skill points (must total up to 16 points)</h2>
 
-	<table>
+    <table>
 	<tr>
 	 <td>Name</td>
-	 <td><input type="text" id="Name" size=2 value=""></td>
+	 <td><input type="text" id="Name" size=8 value=""></td>
 	</tr>
 	<tr>
 	 <td>Pilot</td>
-	 <td><input type="text" id="Pilot" size=2 value=""></td>
+	 <td><input type="text" id="Pilot" size=8 value=""></td>
 	</tr>
 	<tr>
 	 <td>Fighter</td>
-	 <td><input type="text" id="Fighter" size=2 value=""></td>
+	 <td><input type="text" id="Fighter" size=8 value=""></td>
 	</tr>
 	<tr>
 	 <td>Trader</td>
-	 <td><input type="text" id="Trader" size=2 value=""></td>
+	 <td><input type="text" id="Trader" size=8 value=""></td>
 	</tr>
 	<tr>
 	 <td>Engineer</td>
-	 <td><input type="text" id="Engineer" size=2 value=""></td>
+	 <td><input type="text" id="Engineer" size=8 value=""></td>
 	</tr>
-	</table>
-	<div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Difficulty</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Easy</a>
-    <a href="#">Medium</a>
-    <a href="#">Difficult</a>
-    <a href="#">Impossible</a>
-  </div>
-</div>
+    <tr>
+    <td>Difficulty</td>
+    <td>
+        <div>
+        <select id="dropdown">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Difficult</option>
+            <option value="Impossible">Impossible</option>
+        </select>
+        </div>
+    </td>
+    </tr>
+    </table>
 <br>
 </p>
 
