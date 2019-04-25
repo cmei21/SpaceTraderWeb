@@ -17,7 +17,9 @@ function Start()
 
 	if (totalPoints != 16) {
 		document.getElementById('outputDiv').innerHTML = 'Total points must add up to 16!';
-	} else {
+	} else if (!name) {
+        document.getElementById('outputDiv').innerHTML = 'Must input a name!';
+    } else {
 	document.getElementById('outputDiv').innerHTML = 'Name: ' + name + '<br>' + 'Pilot: ' + pilot + '<br>' + 'Fighter: ' + fighter + '<br>' + 'Trader: ' + trader + '<br>' + 'Engineer ' + engineer + '<br>' + 'Difficulty: ' + difficultyLvl + '<br>' + 'Credits: 1000' + '<br>' + 'Cargo:';
 	}
 }
